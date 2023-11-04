@@ -14,7 +14,7 @@ datasource db {
 
 model BookComments {
   commentsId Int @id @default(autoincrement()) @map("commentsId")
-  reviewId Int @map("reviewId")
+  reviewId Int @default(1) @map("reviewId")
   author String @map("author")
   content String @map("content")
   password String @map("password")

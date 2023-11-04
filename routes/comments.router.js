@@ -3,6 +3,8 @@ import { prisma } from '../utils/prisma/index.js';
 
 const router = express.Router();
 
+
+
 // 6. 댓글 작성 API
 router.post('/review/:reviewId/comments', async (req, res) => {
     try {
@@ -10,15 +12,7 @@ router.post('/review/:reviewId/comments', async (req, res) => {
         const { content, author, password } = req.body;
         if (!content || !author || !password) {
             return res.status(400).json({ message: "데이터 형식이 올바르지 않습니다." });
-        }
-
-        const commentsfind = await prisma.bookComments.findFirst({
-            where: { reviewId: +reviewId }
-        });
-
-        if (!commentsfind) {
-            return res.status(404).json({ message: "존재하지 않는 리뷰입니다." });
-        }
+        }        
 
         await prisma.bookComments.create({
             data: {
@@ -28,6 +22,14 @@ router.post('/review/:reviewId/comments', async (req, res) => {
                 password: password
             }
         });
+        
+        const commentsfind = await prisma.bookComments.findFirst({
+            where: { reviewId: +reviewId }
+        });
+
+        if (!commentsfind) {
+            return res.status(404).json({ message: "존재하지 않는 리뷰입니다." });
+        }
 
         return res.status(201).json({ message: "댓글을 등록했습니다." });
     } catch (error) {
