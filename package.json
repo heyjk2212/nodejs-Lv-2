@@ -6,7 +6,7 @@
   "author": "heyjk2212 <jinakim2212@gmail.com>",
   "type": "module",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon src/app.js"
   },
   "license": "MIT",
   "dependencies": {
