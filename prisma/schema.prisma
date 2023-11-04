@@ -21,5 +21,6 @@ model BookReviews {
   createdAt DateTime @default(now()) @map("createdAt")
   updatedAt DateTime @updatedAt @map("updatedAt")
 
+
   @@map("BookReviews")
 }
