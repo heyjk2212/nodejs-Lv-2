@@ -1,8 +1,8 @@
 import express from "express";
 import ReviewsRouter from "../routes/reviews.router.js";
+import commentsrouter from "../routes/comments.router.js";
 
 const router = express.Router();
-app.use(express.urlencoded({ extended: true }));
 const app = express();
 const PORT = 3000;
 
