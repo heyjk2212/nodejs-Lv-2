@@ -9,3 +9,17 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+model BookReviews {
+  reviewId Int @id @default(autoincrement()) @map("reviewId")
+  bookTitle String @map("bookTitle")
+  title String @map("title")
+  content String @map("content") @db.Text
+  starRating Int @map("starRating")
+  author String @map("author")
+  password String @map("password")
+  createdAt DateTime @default(now()) @map("createdAt")
+  updatedAt DateTime @updatedAt @map("updatedAt")
+
+  @@map("BookReviews")
+}
