@@ -11,6 +11,7 @@ datasource db {
 }
 
 
+
 model BookComments {
   commentsId Int @id @default(autoincrement()) @map("commentsId")
   reviewId Int @map("reviewId")
@@ -22,4 +23,18 @@ model BookComments {
   updatedAt DateTime @updatedAt @map("updatedAt")
 
   @@map("BookComments")
+}
+model BookReviews {
+  reviewId Int @id @default(autoincrement()) @map("reviewId")
+  bookTitle String @map("bookTitle")
+  title String @map("title")
+  content String @map("content") @db.Text
+  starRating Int @map("starRating")
+  author String @map("author")
+  password String @map("password")
+  createdAt DateTime @default(now()) @map("createdAt")
+  updatedAt DateTime @updatedAt @map("updatedAt")
+
+
+  @@map("BookReviews")
 }
