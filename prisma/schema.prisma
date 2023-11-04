@@ -10,6 +10,20 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+
+
+model BookComments {
+  commentsId Int @id @default(autoincrement()) @map("commentsId")
+  reviewId Int @map("reviewId")
+  author String @map("author")
+  content String @map("content")
+  password String @map("password")
+
+  createdAt DateTime @default(now()) @map("createdAt")
+  updatedAt DateTime @updatedAt @map("updatedAt")
+
+  @@map("BookComments")
+}
 model BookReviews {
   reviewId Int @id @default(autoincrement()) @map("reviewId")
   bookTitle String @map("bookTitle")
