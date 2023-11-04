@@ -1,6 +1,5 @@
 import express from "express";
 import ReviewsRouter from "../routes/reviews.router.js";
-import CommentsRouter from "../routes/comments.router.js";
 
 const router = express.Router();
 const app = express();

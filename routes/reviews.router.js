@@ -21,7 +21,9 @@ router.post("/reviews", async (req, res, next) => {
   });
 
   // 결과 리턴
-  return res.status(201).json({ message: "책 리뷰를 등록하였습니다." });
+  return res
+    .status(201)
+    .json({ message: "책 리뷰를 등록하였습니다.", data: review });
 });
 
 // 리뷰 목록 조회 API  [GET]
@@ -119,7 +121,9 @@ router.put("/review/:reviewId", async (req, res, next) => {
     where: { reviewId: +reviewId, password: password },
   });
 
-  return res.status(200).json({ message: "책 리뷰를 수정하였습니다" });
+  return res
+    .status(200)
+    .json({ message: "책 리뷰를 수정하였습니다", data: review });
 });
 
 // 리뷰 삭제 API  [DELETE]
