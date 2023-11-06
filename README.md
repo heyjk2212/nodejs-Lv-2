@@ -55,8 +55,7 @@
 5. 모듈 시스템: `ES6`
 
 ## ERD
-<img src= "https://github.com/heyjk2212/nodejs-Lv-2/assets/147573753/6e0915a0-d7ff-4bf7-8d29-08230ec52882" width="500">
-
+<img src= "https://github.com/heyjk2212/nodejs-Lv-2/assets/147573753/dd18da58-859c-4a23-a104-a3f3056a4aab" width="700">
 
 ## API SPEC
 
