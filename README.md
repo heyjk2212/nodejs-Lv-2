@@ -55,18 +55,19 @@
 5. 모듈 시스템: `ES6`
 
 ## ERD
-<img src= "https://github.com/heyjk2212/nodejs-Lv-2/assets/147573753/dd18da58-859c-4a23-a104-a3f3056a4aab" width="700">
+![ERD](https://github.com/heyjk2212/nodejs-Lv-2/assets/147573753/aa97518d-cc66-4ee3-9333-5e8bc0b0e268)
+
 
 ## API SPEC
 
-|기능|METHOD|URL|Req body|Res body|
-|:--|:--:|:--|:--|:--|
-|리뷰 등록|POST|/api/reviews||
-|리뷰 목록 조회|GET|/api/reviews|||
-|리뷰 상세 조회|GET|/api/review/:reviewId|
-|리뷰 정보 수정|PUT|/api/review/:reviewId|||
-|리뷰 삭제|DELETE|/api/review/:reviewId||
-|댓글 작성|POST|/api/review/:reviewId/comments||
-|댓글 목록 조회|GET|/api/review/:reviewId/comments|||
-|댓글 수정|PUT|/api/review/:reviewId/comments/:commentsId|||
-|댓글 삭제 |DELETE|/api/review/:reviewId/comments/:commentsId||
+|기능|METHOD|URL|
+|:--|:--:|:--|
+|리뷰 등록|POST|http://localhost:3000/api/reviews|
+|리뷰 목록 조회|GET|http://localhost:3000/api/reviews|
+|리뷰 상세 조회|GET|http://localhost:3000/api/review/:reviewId|
+|리뷰 정보 수정|PUT|http://localhost:3000/api/review/:reviewId|
+|리뷰 삭제|DELETE|http://localhost:3000/api/review/:reviewId|
+|댓글 작성|POST|http://localhost:3000/api/review/:reviewId/comments|
+|댓글 목록 조회|GET|http://localhost:3000/api/review/:reviewId/comments|
+|댓글 수정|PUT|http://localhost:3000/api/review/:reviewId/comments/:commentsId|
+|댓글 삭제 |DELETE|http://localhost:3000/api/review/:reviewId/comments/:commentsId|
