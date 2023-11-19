@@ -31,28 +31,6 @@
     - 비밀번호를 비교하여, 동일할 때만 댓글이 삭제되게 하기
 ```
 
-## Directory Structure
-```
-├── prisma
-│   └── schema.prisma
-├── src
-│   ├── app.js
-│   ├── routes
-│   │   ├── comments.router.js
-│   │   └── reviews.router.js
-│   └── utils
-│       └── prisma
-│           └── index.js
-├── package.json
-└── yarn.lock
-```
-
-## Tech Stack
-1. 데이터베이스: `MySQL`
-2. ORM: `Prisma`
-3. 웹 프레임워크: `Express.js`
-4. 패키지 매니저: `yarn`
-5. 모듈 시스템: `ES6`
 
 ## ERD
 ![ERD](https://github.com/heyjk2212/nodejs-Lv-2/assets/147573753/aa97518d-cc66-4ee3-9333-5e8bc0b0e268)
